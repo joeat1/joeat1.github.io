@@ -110,7 +110,10 @@ comments_provider: gitalk
 
 # https://github.com/gitalk/gitalk#install
 gitalk:
+    enable: true #是否开启
+    githubID: joeat1 #你的Github用户名
     owner: joeat1
+    adminUser: joeat1 # 评论初始化账户(GitHub ID)
     id: location.pathname
     repo: blog-comments
     clientID: 783cc6c5b794f3c1b384
