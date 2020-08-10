@@ -111,6 +111,7 @@ comments_provider: gitalk
 # https://github.com/gitalk/gitalk#install
 gitalk:
     owner: joeat1
+    id: location.pathname
     repo: blog-comments
     clientID: 783cc6c5b794f3c1b384
     clientSecret: 9cb2b8ebb436afe54876476c24736426d38d1ab8
