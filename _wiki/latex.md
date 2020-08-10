@@ -1,3 +1,11 @@
+---
+layout: wiki
+title: Latex 使用
+categories: Latex
+description: Latex 使用技巧汇总
+keywords: Latex
+---
+
 # Latex使用
 
 ## 基本信息
