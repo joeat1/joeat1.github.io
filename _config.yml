@@ -107,7 +107,7 @@ gitalk:
     owner: joeat1
     repo: blog-comments
     clientID: 783cc6c5b794f3c1b384
-    clientSecret: 9cb2b8ebb436afe54876476c24736426d38d1ab8
+    clientSecret: ba10aaa6992c2671c394e12af0ffe71d529dc1ee
 
 # ---------------- #
 #      Search      #
