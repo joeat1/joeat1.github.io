@@ -4,10 +4,10 @@
 baseurl:
 url: https://joeat1.github.io
 date_format: "ordinal"
-title: 日志
-subtitle: "信息搜集怪"
-description: "信息搜集怪"
-keywords: 信息搜集怪, 程序员
+title: 随笔
+subtitle: "业余随记"
+description: "业余随记"
+keywords: 业余随记, 程序员
 timezone: Asia/Shanghai
 encoding: "utf-8"
 side_bar_repo_limit: 3
@@ -89,12 +89,11 @@ permalink: /:year/:month/:day/:title/
 plugins:
     - jekyll-github-metadata
     - rouge
-#     - jekyll-html-pipeline
     - jekyll-paginate
     - jekyll-sitemap
     - jekyll-feed
     - jemoji
-#     - jekyll-mentions
+
 collections:
     wiki:
         output: true
