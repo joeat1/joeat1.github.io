@@ -1,7 +1,7 @@
 ---
 layout: wiki
-title: VSCODE
-categories: VSCODE
+title: VSCODE 的使用技巧
+categories: wiki VSCODE
 description: VSCODE使用
 keywords: VSCODE
 ---

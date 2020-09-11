@@ -1,7 +1,7 @@
 ---
 layout: wiki
-title: Latex 使用
-categories: Latex
+title: Latex 使用技巧
+categories: wiki Latex
 description: Latex 使用技巧汇总
 keywords: Latex
 ---

@@ -1,7 +1,7 @@
 ---
 layout: wiki
-title:微信小程序
-categories: 微信小程序
+title: 微信小程序
+categories: wiki 微信小程序
 description: 微信小程序使用
 keywords: 微信小程序
 ---
