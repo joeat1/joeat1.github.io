@@ -35,6 +35,7 @@ tfrecord 格式数据
 + `tf.data.Dataset.zip` 用于合并数据
 + `print(dataset.__iter__())` 查看每一个迭代下的数据
 + 通过 `prefetch` 方法让模型的训练和每个batch数据集的加载并行
++ `tf.data.Dataset.from_generator(lambda: data_generator(arg1, arg2), output_types=((tf.int32, tf.int32)` 通过函数生成数据集，适用于数据规模较大的情况。但是这个数据生成方法常常容易出现问题，在解析数据的类型和投喂给模型时常常出现数据格式识别不了等情况。
 
 + 切分数据集
     ```python
@@ -68,7 +69,15 @@ tfrecord 格式数据
     for layer in model.layers:
         layer.trainable = False
     ```
-+ 
++ 利用 tensorboard 查看训练效果
+    ```python
+    log_dir = "logs/" + datatime.datatime.now().strftime("%Y%m%d-%H%M%S")
+    tensorboard_callback = tf.keras.callbacks.TensorBoard(log_dir=log_dir, histogram_freq=1)
+    model.fit(dataset, callbacks=[tensorboard_callback])
+    ```
+    tensorboard --logdir=log_dir
+
+
 
 ## 错误汇总
 

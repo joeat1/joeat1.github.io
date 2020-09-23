@@ -12,3 +12,7 @@ keywords: winodws
 + PrtSc 全屏截图
 + Win + Shift + S 可选范围式截图
 + Alt + A 使用 QQ 、微信等软件的截图快捷键
+
+
+## 输入法
++ win10 自带微软拼音现在输入 emoji 的快捷键是 Ctrl + Shift + B 

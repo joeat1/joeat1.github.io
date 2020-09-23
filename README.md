@@ -16,9 +16,13 @@ mathjax: true
 
 **目录**
 
-* TOC
-{:toc}
+```
+    * TOC
+    {:toc}
+```
 
+## 上传同步
++ 在 windows 平台上可以利用 `push_content.bat` 进行数据的上传。
 
 ## 规范
 
