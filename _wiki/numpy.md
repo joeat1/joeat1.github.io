@@ -7,6 +7,13 @@ keywords: numpy
 ---
 
 
+## 数据处理
+
++ 数组拼接： np.concatenate((a,b,c),axis=0) 
+
+
+## 数据生成
+
 生成仿真数据： (x,y) 的点遵循均值为[1.4, 0]、协方差矩阵为[[0.3, 0], [0, 0.3]]的二维高斯分布。
 ```python
 import numpy as np
@@ -18,3 +25,6 @@ cov2 = [[0.3, 0], [0, 0.3]]
 x, y = np.random.multivariate_normal(mean, cov, 100).T
 x2, y2 = np.random.multivariate_normal(mean2, cov2, 20).T
 ```
+
+
+
