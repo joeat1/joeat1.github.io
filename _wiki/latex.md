@@ -26,6 +26,8 @@ CTeX 宏集能适配于多种编译方式，很好支持了中文和中文排版
 + 在线的Latex编辑器有：http://overleaf.com/
 + Latex公式在线编辑器：http://latex.codecogs.com/eqneditor/editor.php
 
++ pandoc 实现 latex 转为 word ， `pandoc test.tex -o test.doc`
+
 ## 简单示例
 
 ```tex

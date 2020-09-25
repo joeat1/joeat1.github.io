@@ -27,6 +27,7 @@ keywords: python
   + 包更新
     pip install matplotlib --upgrade
   + 安装特定版本的包：pip install XXX==X.X.X.X 如果安装A时需要的B也要限定版本， 需要将B的版本写在前面。一般会出现版本的相互依赖，需要不断调整顺序，特别是python3的一些包是不能用于python2的
+  + `pip`出现现有安装包干扰，可以增加 --ignore-installed 
 + easy_install XXX
 + 到模块对应官网或github下载源码文件或whl文件或release版本可运行的exe文件
 
