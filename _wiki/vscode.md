@@ -12,7 +12,7 @@ keywords: VSCODE
 + Markdown All in One ： 便于Markdown的编译和预览
 + TODO Highlight： 高亮`TODO:`的位置
 + Chinese (Simplified) Language Pack：适用于 VS Code 的中文（简体）语言包
-
++ TabLinepylintArgs
 
 ## 快速的Git提交
 
@@ -35,3 +35,9 @@ git push -u origin master
 或者通过 `git clone` 从github等代码托管平台拉取项目信息，此处一般自动绑定了remote信息。
 
 在代码管理界面，对文件夹右键，选择全部提交后选择推送，即可实现。
+
+
+## 问题
+
++ VScode 中报错 Unable to import 'xxx' pylint(import-error) 
+  + 在 vscode 中依次点击 文件 -> 首选项 -> 设置，然后在搜索框中输入 `pylintArgs` ，找到 Python>Linting:Pylint Args 的设置项目，然后点击“添加项”，分别添加 `--errors-only` 及 `--disable=E0401` 。

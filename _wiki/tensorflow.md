@@ -32,6 +32,7 @@ tfrecord 格式数据
 + `tf.data.Dataset.from_tensor_slices` 可以将 numpy 、 list 、 pandas 、 dict 等数据类型封装转换为 Tensor 格式，生成的 `tf.data.Dataset` 还可以通过 `map`
  函数实现预处理，如图片加载、数据增强、标签one hot化等。
 + `tf.cast(labels, tf.int64)` 用于修改数据类型
+  + 还可以将一些条件转换为数值形式 `tf.cast(a<2,dtype=tf.float32)` 
 + `tf.data.Dataset.zip` 用于合并数据
 + `print(dataset.__iter__())` 查看每一个迭代下的数据
 + 通过 `prefetch` 方法让模型的训练和每个batch数据集的加载并行
