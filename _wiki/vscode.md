@@ -12,6 +12,7 @@ keywords: VSCODE
 + Markdown All in One ： 便于Markdown的编译和预览
 + TODO Highlight： 高亮`TODO:`的位置
 + Chinese (Simplified) Language Pack：适用于 VS Code 的中文（简体）语言包
++ Remote-SSH： 远程服务连接（在第一次新建 Host 的时候需要联网，否则可能在连接服务器时提示 “could not establish connection to "xxx".Connecting was canceled." 。） 也可以参考[网址](https://blog.csdn.net/Austin_Yan/article/details/100176024)增加免密登陆。安装成功后通过 Ctrl+J，调出服务器端的 Terminal 面板，可以用于在远程机器上执行命令。在新窗口可以在菜单栏使用File->Open Folder,然后就可以打开服务器端的文件或者文件夹。
 
 
 ## 快速的Git提交
