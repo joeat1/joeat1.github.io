@@ -33,12 +33,15 @@ optimizer.step() # 使用优化器来更新参数
 ## 安装使用
 
 相比 tensorflow 而言，其安装比较方便，参考[官方链接](https://pytorch.org/get-started/locally/)可以快速了解。原始版本也可以在[链接](https://pytorch.org/get-started/previous-versions/)中找到内容。
-使用 conda 进行安装： `conda install pytorch torchvision cudatoolkit=10.2 -c pytorch`  此处 cudatoolkit 需要根据系统的版本特点进行设定，在此之前需要安装好 GPU 相关驱动程序。
+使用 conda 进行安装： `conda install pytorch torchvision cudatoolkit=10.2 -c pytorch`  此处 cudatoolkit 需要根据系统的版本特点进行设定，在此之前需要 **安装好 GPU 相关驱动程序** （CUDA 与 CUDNN）。
 
-验证安装的 pytorch 是否支持 CUDA 
+验证安装的 pytorch 是否支持 CUDA ，以及对应的 CUDA 和 cuDNN 版本
 ```python
 import torch
-torch.cuda.is_available()
+print(torch.__version__)
+print(torch.cuda.is_available())
+print(torch.version.cuda)
+print(torch.backends.cudnn.version())
 ```
 
 ## 数据读取

@@ -7,13 +7,18 @@ keywords: tensorflow
 ---
 
 ## 安装使用
-+ TensorFlow 2 软件包 tensorflow：支持 CPU 和 GPU 的最新稳定版（适用于 Ubuntu 和 Windows）
++ TensorFlow 2 软件包 tensorflow：支持 CPU 和 GPU 的最新稳定版（适用于 Ubuntu 和 Windows），不推荐安装 TF2.0 （存在较多的问题）
 + 对于 1.15 （TensorFlow 1.x 的最终版本）及更早版本，CPU 和 GPU 软件包是分开的
     ```bash
     pip install tensorflow==1.15      # CPU
     pip install tensorflow-gpu==1.15  # GPU
     ```
 + 系统要求：Python 3.5-3.7 、 pip 19.0 或更高版本（需要 manylinux2010 支持）、 Ubuntu 16.04 或更高版本（64 位） 、 Windows 7 或更高版本（64 位）（仅支持 Python 3）、 GPU 支持需要使用支持 CUDA® 的显卡（适用于 Ubuntu 和 Windows）
+  + 查看显卡驱动： nvidia-smi.exe （windows 在 C:\Program Files\NVIDIA Corporation\NVSMI 路径下）  nvidia-smi（linux）
+    + Volatile GPU-Util：GPU 使用率
+    + Driver Version 驱动版本
+    + Memory-Usage：显存使用率
+  + 查看 CUDA 版本： nvcc --version
 + 验证安装效果： `python -c "import tensorflow as tf;print(tf.reduce_sum(tf.random.normal([1000, 1000])))"` 
 
 ## 数据读取
@@ -109,3 +114,6 @@ tfrecord 格式数据
     * 源于 `x, y, sample_weight = data_adapter.unpack_x_y_sample_weight(data)` 无法正确地将 x 与 y 分开，导致数据无法被程序理解
     * 在利用 `tf.data.Dataset` 时，最后提供给 model 的数据需要为 x, y 的形式， x 可以为 list 或者 tuple 。
 
++ Skipping optimization due to error while loading function libraries: Invalid argument: Functions '__inference___backward_cudnn_gru_973_1109_specialized_for_SGD_gradients_bidirectional_StatefulPartitionedCall_1_grad_StatefulPartitionedCall_at___inference_keras_scratch_graph_2955' and '__inference___backward_standard_gru_1969_2558' both implement 'gru_fd36615e-65df-4b45-9bd7-8903b889b94c' but their signatures do not match. 
+    * 使用 TF2.0 版本构建 LSTM/GRU/RNN 层结构的时候常出现这种问题，在长时间训练之后还可能会出现程序崩溃。
+    * 建议更新 CUDA 与 CUDNN ，并且升级 TF 版本。
