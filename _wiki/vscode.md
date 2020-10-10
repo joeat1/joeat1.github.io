@@ -13,6 +13,7 @@ keywords: VSCODE
 + TODO Highlight： 高亮`TODO:`的位置
 + Chinese (Simplified) Language Pack：适用于 VS Code 的中文（简体）语言包
 + TabLinepylintArgs
++ EmbeddedBrowser 内嵌的浏览器
 
 ## 快速的Git提交
 
