@@ -27,4 +27,7 @@ x2, y2 = np.random.multivariate_normal(mean2, cov2, 20).T
 ```
 
 
+## 问题
 
++ `ModuleNotFoundError: No module named numpy.random._pickle`
+  + 使用的 numpy 版本较老或者版本不匹配，使得在其他包调用时存在问题。通过 `pip install numpy --upgrade` 来实现版本更新，或者在安装时直接指定 numpy 的版本号。
