@@ -12,7 +12,7 @@ keywords: Latex
 
 TeX 的源代码是后缀为 .tex 的纯文本文件。编辑器主要有专用的 `TeXstudio` 和通用的`Visual Studio Code`（添加 latex workshop 插件） 等。而编译系统主要是 `TeX Live` 和 `MiKTeX` ，它们包含 TeX 系统的执行程序以及宏包（一系列控制序列的合集)，也都带有 TeXworks 编辑器。一般编译系统内置的编译引擎包含 pdfLaTeX, XeLaTeX, LaTeX 等。 
 
-CTeX 宏集能适配于多种编译方式，很好支持了中文和中文排版，包含若干文档类（.cls 文件）和宏包（.sty 文件）。
+`CTeX` 宏集能适配于多种编译方式，很好支持了中文和中文排版，包含若干文档类（.cls 文件）和宏包（.sty 文件）。
 
 请注意，由于操作系统编码和 TeX 内部实现的限制，在 Windows 平台上，TeX 涉及到的文件（包括 .tex, .jpg 等）名字中都**不要包含中文**。否则，在编译时可能会因为编码问题出现报错。
 
@@ -35,9 +35,8 @@ CTeX 宏集能适配于多种编译方式，很好支持了中文和中文排版
 % \documentclass{article}
 % 这里是导言区。导言区出现的控制序列，往往会影响整篇文档的格式。如页面大小、页眉页脚样式、章节标题样式等等
 \title{你好，world!}
-\author{Liam}
+\author{Limei}
 \date{\today}
-
 
 \begin{document}
 \maketitle
@@ -63,11 +62,17 @@ CTeX 宏集能适配于多种编译方式，很好支持了中文和中文排版
   + `begin` 控制序列总是与 `end` 成对出现，他们中间的内容被称为环境。
   + `maketitle` 能将在导言区中定义的标题、作者、日期按照预定的格式展现出来。
   + `\usepackage{}` 可以用来调用宏包。如\usepackage{amsmath} 可以使用 AMS-LaTeX 提供的数学功能。
+  + `\paragraph` 表示段落。
 
 + 注释：TeX 以百分号 % 作为注释标记。若要输出 % 字符本身，则需要在 % 之前加上反斜杠 \ 进行转义（escape），如`\%`。
 
 
 ## 使用
+
+### 字符
+
++ 省略号使用 $\ldots$ 
++ ` `` `XXXX `''`  表示双引号
 
 ### 数学公式
 
@@ -87,28 +92,32 @@ CTeX 宏集能适配于多种编译方式，很好支持了中文和中文排版
 
 在线工具：[AI Powered Document Editing](https://mathpix.com/) 可以将截屏中的公式转换成 LaTeX 数学公式的代码
 
-**图片**
+### 图片
 
-利用 graphicx 宏包提供的 \includegraphics 命令插入图片，并且可以根据自己的需求调整大小，如`\includegraphics[width = .8\textwidth]{a.jpg}` 图片比例不变并且宽度会被缩放至页面宽度的百分之八十。
-一般使用 figure 环境自动完成位置的调整。
+利用 `graphicx` 宏包提供的 `\includegraphics` 命令插入图片，并且可以根据自己的需求调整大小，如`\includegraphics[width = .8\textwidth]{a.jpg}` 图片比例不变并且宽度会被缩放至页面宽度的百分之八十。
+一般使用 `figure` 环境自动完成位置的调整，其后方括号内为可选参数，用于指示图形被放置的位置。
++ `h` 当前位置。 将图形放置在 正文文本中给出该图形环境的地方。如果本页所剩的页面不够， 这一参数将不起作用。
++ `t` 顶部。 将图形放置在页面的顶部。
++ `b` 底部。 将图形放置在页面的底部。
++ `p` 浮动页。 将图形放置在一只允许 有浮动对象的页面上。
 ```tex
 \begin{figure}[htbp]
-\centering
-\includegraphics{a.jpg}
-\caption{有图有真相}
-\label{fig:myphoto}
+    \centering
+    \includegraphics{a.jpg}
+    \caption{有图有真相}
+    \label{fig:myphoto}
 \end{figure}
 ```
 
-**表格**
+### 表格
 
 tabular 环境提供了最简单的表格功能。它用 \hline 命令表示横线，在列格式中用 | 表示竖线；用 & 来分列，用 \\ 来换行。一般用table 环境完成表格位置的调整。
 
-**字体**
+### 字体
 
 在系统命令行中输入如下命令：`fc-list :lang=zh-cn > font_zh-cn.txt` 来查看系统字体。每一行的格式为：<字体文件路径>: <字体标示名1>, <字体表示名2>:Style=<字体类型>
 
-**换行**
+### 换行
 
 LaTeX 将一个换行当做是一个简单的空格来处理，如果需要换行另起一段，则需要用两个换行（一个空行）来实现。
 

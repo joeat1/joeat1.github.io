@@ -6,6 +6,11 @@ description: winodws 使用技巧汇总
 keywords: winodws
 ---
 
+## 镜像下载
+
+访问官方地址：https://www.microsoft.com/zh-cn/software-download/windows10ISO/ 根据提示进行系统工具下载，通过工具制作系统盘或更新系统
+如果需要下载镜像，可以通过谷歌浏览器，切换 use-agent 为手机模式，即可发现下载直链。
+
 ## 常用快捷键
 
 ### 截图
