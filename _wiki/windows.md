@@ -11,6 +11,10 @@ keywords: winodws
 访问官方地址：https://www.microsoft.com/zh-cn/software-download/windows10ISO/ 根据提示进行系统工具下载，通过工具制作系统盘或更新系统
 如果需要下载镜像，可以通过谷歌浏览器，切换 use-agent 为手机模式，即可发现下载直链。
 
+## office
+
+在已激活的电脑或 Mac 上下载并安装或重新安装 Office 365 或 Office 2019：(参考)[https://support.microsoft.com/zh-cn/office/%e5%9c%a8%e7%94%b5%e8%84%91%e6%88%96-mac-%e4%b8%8a%e4%b8%8b%e8%bd%bd%e5%b9%b6%e5%ae%89%e8%a3%85%e6%88%96%e9%87%8d%e6%96%b0%e5%ae%89%e8%a3%85-microsoft-365-%e6%88%96-office-2019-4414eaaf-0478-48be-9c42-23adc4716658?ui=zh-cn&rs=zh-cn&ad=cn] 访问 https://account.microsoft.com/services/ 即可看到软件安装下载的按钮。
+
 ## 常用快捷键
 
 ### 截图
