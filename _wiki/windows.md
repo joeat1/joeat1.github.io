@@ -8,12 +8,28 @@ keywords: winodws
 
 ## 镜像下载
 
+> 镜像可以用于系统重装和虚拟机创建
+
 访问官方地址：https://www.microsoft.com/zh-cn/software-download/windows10ISO/ 根据提示进行系统工具下载，通过工具制作系统盘或更新系统
 如果需要下载镜像，可以通过谷歌浏览器，切换 use-agent 为手机模式，即可发现下载直链。
 
-## office
+## 默认设置更换
 
-在已激活的电脑或 Mac 上下载并安装或重新安装 Office 365 或 Office 2019：[参考](https://support.microsoft.com/zh-cn/office/%e5%9c%a8%e7%94%b5%e8%84%91%e6%88%96-mac-%e4%b8%8a%e4%b8%8b%e8%bd%bd%e5%b9%b6%e5%ae%89%e8%a3%85%e6%88%96%e9%87%8d%e6%96%b0%e5%ae%89%e8%a3%85-microsoft-365-%e6%88%96-office-2019-4414eaaf-0478-48be-9c42-23adc4716658?ui=zh-cn&rs=zh-cn&ad=cn) 访问 https://account.microsoft.com/services/ 即可看到软件安装下载的按钮。
+> 部分 Windows 的默认设置并不符合个人需求
+
+### 更换默认下载目录
++ 在快速访问下找到 `下载` ，右击鼠标点击 `属性` 后找到 `位置` 这个导航栏，从中点击 `移动` 然后选择需要更改的文件夹
+
+### 更换新文档保存路径
++ 打开的设置窗口，我们依次点击 系统-存储 找到 `更多存储设置` 的 更改新内容的保存位置，即可全部切换到非系统盘。此项操作之后系统会自动在对应盘创建一个用户文件夹来保存上述内容。
+
+### 更换默认程序安装路径
+> 默认程序安装路径指的是 `program files` 等文件夹，更换之后 可能会出现对应盘有 Windows Apps（窗口应用程序）文件夹。
++ 找到 `\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion` 修改 `ProgramFilesDir` 和 `ProgramFilesDir (x86)` 的值为目标文件夹
+
+### 更换 office 目录
+
++ 建议新电脑激活之后，更换默认程序路径之后重装。可以参考[链接](https://support.microsoft.com/zh-cn/office/%e5%9c%a8%e7%94%b5%e8%84%91%e6%88%96-mac-%e4%b8%8a%e4%b8%8b%e8%bd%bd%e5%b9%b6%e5%ae%89%e8%a3%85%e6%88%96%e9%87%8d%e6%96%b0%e5%ae%89%e8%a3%85-microsoft-365-%e6%88%96-office-2019-4414eaaf-0478-48be-9c42-23adc4716658?ui=zh-cn&rs=zh-cn&ad=cn)，在已激活的电脑或 Mac 上下载并安装或重新安装 Office 365 或 Office 2019： 访问 https://account.microsoft.com/services/ 即可看到软件安装下载的按钮。
 
 ## 常用快捷键
 
