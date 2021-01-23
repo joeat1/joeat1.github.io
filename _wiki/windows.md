@@ -27,13 +27,13 @@ keywords: winodws
 > 参考[链接](https://www.zhihu.com/question/31001796/answer/1099015956) 或者 [链接](https://blog.csdn.net/wpwalter/article/details/79394709)
 + 第一步：文件夹右键——属性——“安全”选项卡——“高级”选项卡——更改“所有者”——输入“你当前用户的用户名”，再勾选上【替换子容器和对象的所有者】，点确定退出“高级”选项卡。然后再点确定退出“属性”选项卡。第二步：依照第一步再次打开“高级”选项卡。点下面“禁用继承”按钮，全部转为“显式权限”。然后把所有包含“拒绝”的权限条目删除。再然后点“添加”，添加“Users”的“完全控制”权限(如果已经有了就不用加了)。第三步：勾选“使用可从此对象继承的权限替换所有子对象的权限”，确定。
 
-### 更换默认程序安装路径
-> 默认程序安装路径指的是 `program files` 等文件夹，更换之后 可能会出现对应盘有 Windows Apps（窗口应用程序）文件夹。
-+ 找到 `\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion` 修改 `ProgramFilesDir` 和 `ProgramFilesDir (x86)` 的值为目标文件夹
-
-### 更换 office 目录
+### 重装 office 
 
 + 建议新电脑激活之后，更换默认程序路径之后重装。可以参考[链接](https://support.microsoft.com/zh-cn/office/%e5%9c%a8%e7%94%b5%e8%84%91%e6%88%96-mac-%e4%b8%8a%e4%b8%8b%e8%bd%bd%e5%b9%b6%e5%ae%89%e8%a3%85%e6%88%96%e9%87%8d%e6%96%b0%e5%ae%89%e8%a3%85-microsoft-365-%e6%88%96-office-2019-4414eaaf-0478-48be-9c42-23adc4716658?ui=zh-cn&rs=zh-cn&ad=cn)，在已激活的电脑或 Mac 上下载并安装或重新安装 Office 365 或 Office 2019： 访问 https://account.microsoft.com/services/ 即可看到软件安装下载的按钮。
+
+### 删除重装系统后产生的windows.old文件夹
++ 尝试使用磁盘清理功能来删除Windows.old文件夹
++ 右键点击C盘，点击属性，点击“磁盘清理”，勾选“以前的Windows安装”，点击确认后“删除文件”按钮即可。
 
 ## 常用快捷键
 
