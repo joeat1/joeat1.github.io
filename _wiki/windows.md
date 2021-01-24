@@ -29,11 +29,15 @@ keywords: winodws
 
 ### 重装 office 
 
-+ 建议新电脑激活之后，更换默认程序路径之后重装。可以参考[链接](https://support.microsoft.com/zh-cn/office/%e5%9c%a8%e7%94%b5%e8%84%91%e6%88%96-mac-%e4%b8%8a%e4%b8%8b%e8%bd%bd%e5%b9%b6%e5%ae%89%e8%a3%85%e6%88%96%e9%87%8d%e6%96%b0%e5%ae%89%e8%a3%85-microsoft-365-%e6%88%96-office-2019-4414eaaf-0478-48be-9c42-23adc4716658?ui=zh-cn&rs=zh-cn&ad=cn)，在已激活的电脑或 Mac 上下载并安装或重新安装 Office 365 或 Office 2019： 访问 https://account.microsoft.com/services/ 即可看到软件安装下载的按钮。
++ 在新电脑激活之后重装还能再次激活。更换默认程序路径之后重装。可以参考[链接](https://support.microsoft.com/zh-cn/office/%e5%9c%a8%e7%94%b5%e8%84%91%e6%88%96-mac-%e4%b8%8a%e4%b8%8b%e8%bd%bd%e5%b9%b6%e5%ae%89%e8%a3%85%e6%88%96%e9%87%8d%e6%96%b0%e5%ae%89%e8%a3%85-microsoft-365-%e6%88%96-office-2019-4414eaaf-0478-48be-9c42-23adc4716658?ui=zh-cn&rs=zh-cn&ad=cn)，在已激活的电脑或 Mac 上下载并安装或重新安装 Office 365 或 Office 2019： 访问 https://account.microsoft.com/services/ 即可看到软件安装下载的按钮。
 
 ### 删除重装系统后产生的windows.old文件夹
 + 尝试使用磁盘清理功能来删除Windows.old文件夹
 + 右键点击C盘，点击属性，点击“磁盘清理”，勾选“以前的Windows安装”，点击确认后“删除文件”按钮即可。
+
+### 自启动项管理
+
++ 任务管理器-启动 中可以找到主要的自启动程序，选择禁用即可阻止自启动工作
 
 ## 常用快捷键
 
