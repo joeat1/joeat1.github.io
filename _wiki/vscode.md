@@ -41,9 +41,9 @@ git push -u origin master
 
 ### 修改并推送
 
-修改了之后，在`源代码管理`界面的选项中，将修改的内容 `全部提交` 后选择推送，即可实现。
+修改了之后，在`源代码管理`界面的选项中，将修改的内容 `提交` 后选择 `推送` ，即可实现代码的上传。同样也可以选择`拉取`从而获取远端的更改结果。
 
-## 问题
+## 常见问题
 
 + VScode 中报错 Unable to import 'xxx' pylint(import-error) 
   + 在 vscode 中依次点击 文件 -> 首选项 -> 设置，然后在搜索框中输入 `pylintArgs` ，找到 Python>Linting:Pylint Args 的设置项目，然后点击“添加项”，分别添加 `--errors-only` 及 `--disable=E0401` 。
