@@ -8,10 +8,10 @@ keywords: pytorch
 
 ## 优势特性
 
-+ 类似 numpy 的多种张量计算函数，并能使用强大的 GPU 加速
-+ 构建在 Python 之上，基于 autograd 系统的深度神经网络，并且采用动态图框架，比较方便 debug 和编写。
++ 类似 `numpy` 的多种张量计算函数，并能使用强大的 `GPU` 加速
++ 构建在 `Python` 之上，基于 `autograd` 系统的深度神经网络，并且采用动态图框架，比较方便 `debug` 和编写。
 
-+ Variable 是对 tensor 的封装，操作和 tensor 一样，但包含了三个属性用于构建神经网络。 Variable 中的 tensor本身.data，对应 tensor 的梯度.grad以及这个 Variable 是通过什么方式得到的.grad_fn。这些属性可以在 Variable 发现传播（`backward()` 时自动求导。如何对一个向量或者矩阵自动求导，需要往backward()中传入一个参数和反向传播的数值维度一样大，其中的数值用于标记各个元素分量求导后的权重。多次自动求导需要手动设置 `retain_graph=True` 保留计算图。
++ `Variable` 是对 `tensor` 的封装，操作和 `tensor` 一样，但包含了三个属性用于构建神经网络： `tensor` 数据本身 `.data` ，对应的梯度 `.grad` 以及对应 `Variable` 生成的函数 `.grad_fn` 。这些属性可以在 `Variable` 发现传播（`backward()` 时自动求导。如何对一个向量或者矩阵自动求导，需要往 `backward()` 中传入一个参数和反向传播的数值维度一样大，其中的数值用于标记各个元素分量求导后的权重。多次自动求导需要手动设置 `retain_graph=True` 保留计算图。
 
 ```python
 from torch.autograd import Variable
@@ -22,7 +22,7 @@ y.backward()
 print(x.grad)
 ```
 
-+ Parameter 这个本质上和 Variable 是一样的，只不过其默认是要求梯度的，而 Variable 默认是不求梯度的。 PyTorch 中的优化器 torch.optim 就是 Parameter 。
++ `Parameter` 这个本质上和 `Variable` 是一样的，只不过其默认是要求梯度的，而 `Variable` 默认是不求梯度的。 `PyTorch` 中的优化器 `torch.optim` 就是 `Parameter` 。
 ```python
 optimizer = torch.optim.SGD( lr=1.)
 optimizer.zero_grad() # 使用优化器将梯度归 0
@@ -43,6 +43,9 @@ print(torch.cuda.is_available())
 print(torch.version.cuda)
 print(torch.backends.cudnn.version())
 ```
+
+如果需要利用 `tensorboard` 用于训练信息的保存，可以通过 `pip install tensorboard` 下载（推荐 `2.0.1` 版本），如果 `tensorboard` 运行在远程连接服务器，使用 `ssh -L 16006:127.0.0.1:6006 username@remote_server_ip` 将服务器的6006端口转移到自己电脑的16006端口，在服务器上正常使用 `tensorboard --logdir=runs` ，在本地打开 `127.0.0.1:16006` 进行访问。
+
 
 ## 数据读取
 
@@ -130,7 +133,7 @@ print(F.sigmoid(torch.mm(x, w) + b))
 ## 损失函数与评价指标
 > https://pytorch.org/docs/1.5.0/nn.html#loss-functions
 
-回归损失函数
+### 回归损失函数
 
 + 平均绝对误差 MAE (L1损失) `nn.L1Loss` 。 平均绝对误差（Mean Absolute Error,MAE) 是目标变量和预测变量之间绝对差值之和，其函数大部分情况下梯度都是相等的，求解效率低，这并不利于收敛，但是数值稳定，不会出现梯度爆炸的问题，并且对离群点不那么敏感，较为稳健。
 + 均方误差 MSE (L2 Loss) `nn.MSELoss` 。均方误差（Mean Square Error,MSE）是模型预测值与真实样本值之间差值平方的平均值。其函数曲线连续且处处可导，便于梯度下降，并且随着差值的减小，梯度也在减小，这有利于收敛。但平方运算会将大于 1 的差值放大，也就使得损失函数更关注偏离过大的值，对离群点反应敏感，从而可能为了拟合离群点而降低了整体的模型的性能。
@@ -146,14 +149,14 @@ print(F.sigmoid(torch.mm(x, w) + b))
         return ret
     ```
 
-分类损失函数
+### 分类损失函数
 
 
 + 交叉熵损失函数 `nn.CrossEntropyLoss` 。在 torch 中 CrossEntropyLoss 会做 softmax 操作，相当于 `log_softmax() + NLLLoss()` 
 
 + 负对数似然损失函数 `nn.NLLLoss` 
 
-统计准确数量
+### 统计准确数量
 num_correct = (pred == label).sum().item()
 
 
@@ -163,7 +166,6 @@ num_correct = (pred == label).sum().item()
 optimizer = torch.optim.Adam(net.parameters(), lr=1e-3)
 + SGD
 optimzier = torch.optim.SGD(net.parameters(), 1e-2)
-
 
 
 ## 模型与网络
