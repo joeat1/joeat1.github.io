@@ -51,7 +51,7 @@ docker load -i 保存的文件名
 # 通过镜像创建容器
 docker run [option] 镜像名 [向启动容器中传入的命令]
 # 进入已运行的容器
-docker exec -it 容器名或容器id 进入后执行的第一个命令
+docker exec -it 容器名或容器id 进入后执行的第一个命令 # 例如 /bin/bash
 # 列出本机所有容器，包括已经终止运行的
 docker ps -a
 
