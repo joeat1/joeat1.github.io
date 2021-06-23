@@ -44,6 +44,8 @@ print(torch.version.cuda)
 print(torch.backends.cudnn.version())
 ```
 
+如果出现需要 `msvcp140.dll` 或者 `msvcp140_1.dll` 文件，可以去官方[下载地址](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads)下载并安装(vc_redist_x64.exe)。 参考[链接](https://www.pythonf.cn/read/125430)。
+
 如果需要利用 `tensorboard` 用于训练信息的保存，可以通过 `pip install tensorboard` 下载（推荐 `2.0.1` 版本），如果 `tensorboard` 运行在远程连接服务器，使用 `ssh -L 16006:127.0.0.1:6006 username@remote_server_ip` 将服务器的6006端口转移到自己电脑的16006端口，在服务器上正常使用 `tensorboard --logdir=runs` ，在本地打开 `127.0.0.1:16006` 进行访问。
 
 
