@@ -6,6 +6,9 @@ description: python 使用技巧汇总
 keywords: python
 ---
 
+## 包
++ 定时任务 APScheduler
+
 ### jupyter
 
 "jupyter_contrib_nbextensions" 模块包含了一系列共同开发的非正式插件

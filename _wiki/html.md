@@ -17,11 +17,16 @@ keywords: HTML
 + 弹框：[Layer.js](http://lib.h-ui.net/layer/layer_v3.1.1.zip)（web弹层组件）参考[网页](https://blog.csdn.net/meixu568/article/details/81207340)使用
 + 数据库表格插件：[datatables.js](http://lib.h-ui.net/datatables/datatables_v1.10.15.zip)
 + 弹幕 [danmuplayer](https://github.com/chiruom/DanmuPlayer/)
++ 离线存储 localForage
++ 压缩 jszip
++ 图片处理 [WASM-imageMagick](https://github.com/KnicKnic/WASM-ImageMagick) 
++ 图标字体 [fontawesome](https://fontawesome.com/)
 
 ### 保护代码
 + 代码混淆
 + 禁用F12，右键等
 + 检查域名
++ a标签target为_blank时，最好加上rel="noopener noreferrer"防止新打开的页面中可以通过 window.opener 获取到源页面的部分控制权
 
 ## 基础知识
 
